@@ -348,6 +348,8 @@ RCT_EXPORT_METHOD(handleDetailsUpdate: (NSDictionary *)details
     [paymentResponse setObject:paymentData forKey:@"paymentData"];
     [paymentResponse setObject:paymentMethod forKey:@"paymentMethod"];
     
+    NSLog(@"%@", payment.token);
+
     if (token) {
         [paymentResponse setObject:token forKey:@"paymentToken"];
     }
